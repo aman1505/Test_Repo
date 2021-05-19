@@ -4,17 +4,19 @@ phases:
   install:
     runtime-versions:
        python: 3.8
+       nodejs: 12.x
     commands:
       - echo "installting something"
+      - npm install aws-cdk
+      - python -m pip install -r requirements.txt
   pre_build:
     commands:
       - echo "we are in pre-build phase"
+      - npm install
+      - python test-cases/Test_2.py
   build:
     commands:
-      - echo "we are in build phase"
-      - echo "running some tests"
-      - python Test.py
-      - python Test_2.py
+      - cdk deploy
   post_build:
     commands:
       - echo "running post-build steps"
