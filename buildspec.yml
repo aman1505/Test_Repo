@@ -16,7 +16,7 @@ phases:
       - python test-cases/Test_2.py
   build:
     commands:
-      - npx cdk deploy
+      - npx cdk deploy --require-approval never
   post_build:
     commands:
       - echo "running post-build steps"
