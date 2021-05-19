@@ -14,6 +14,7 @@ phases:
       - echo "we are in build phase"
       - echo "running some tests"
       - python Test.py
+      - python Test_2.py
   post_build:
     commands:
       - echo "running post-build steps"
