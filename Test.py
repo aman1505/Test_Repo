@@ -1,2 +1,2 @@
-Print "hello"
+print("hello")
 #this is change 
