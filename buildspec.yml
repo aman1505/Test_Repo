@@ -16,7 +16,7 @@ phases:
       - python test-cases/Test_2.py
   build:
     commands:
-      - cdk deploy
+      - npx cdk deploy
   post_build:
     commands:
       - echo "running post-build steps"
