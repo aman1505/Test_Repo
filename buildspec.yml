@@ -1,0 +1,19 @@
+version: 0.2
+
+hases:
+  install:
+    runtime-versions:
+       nodejs: 10
+    commands:
+      - echo "installting something"
+  pre_build:
+    commands:
+      - echo "we are in pre-build phase"
+  build:
+    commands:
+      - echo "we are in build phase"
+      - echo "running some tests"
+      - grep -Fq "hello" Test.py
+  post_build:
+    commands:
+      - echo "running post-build steps"
